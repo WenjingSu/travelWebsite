@@ -1,0 +1,49 @@
+<template>
+  <div class="wrapper">
+    <swiper :options="swiperOption">
+        <!-- slides -->
+        <swiper-slide v-for="item in swiperList":key="item.id">
+          <img class="swiper-img" :src="item.imgUrl"/>
+        </swiper-slide>
+
+        <!-- Optional controls -->
+        <div class="swiper-pagination"  slot="pagination"></div>
+      </swiper>
+    </div>
+</template>
+
+<script>
+export default{
+name:'HomeSwiper',
+data:function(){
+  return{
+    swiperOption:{
+      pagination:'.swiper-pagination',
+      loop:true
+    },
+    swiperList:[
+      {id:'0001',
+      imgUrl:'https://imgs.qunarzz.com/vc/44/e9/86/95bc36c9e1c06ebd68bdfe222e.jpg_92.jpg'},
+      {id:'0002',
+      imgUrl:'https://imgs.qunarzz.com/vc/24/36/10/3fc94d042ae62de380581d4c98.jpg_92.jpg'},
+      {id:'0003',
+      imgUrl:'https://imgs.qunarzz.com/vc/48/4d/58/490ca00c8127e8fe8276ab1a20.jpg_92.jpg'}
+    ]
+  }
+}
+}
+</script>
+
+<style lang="stylus" scoped>
+  .wrapper >>> .swiper-pagination-bullet
+    background:#fff
+  .wrapper
+    overflow:hidden
+    width:100%
+    height:0
+    padding-bottom:32.81%
+    .swiper-img
+      width:100%
+
+
+</style>
