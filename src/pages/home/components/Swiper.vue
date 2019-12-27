@@ -41,7 +41,7 @@ data:function(){
     overflow:hidden
     width:100%
     height:0
-    padding-bottom:32.81%
+    padding-bottom:30%
     .swiper-img
       width:100%
 
