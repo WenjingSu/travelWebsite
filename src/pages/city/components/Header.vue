@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    city header
+    城市选择
     <router-link to="/">
       <div class="iconfont header-back">&#xe629;</div>
     </router-link>
