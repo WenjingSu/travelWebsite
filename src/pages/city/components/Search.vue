@@ -33,6 +33,12 @@ export default{
       timer:null
     }
   },
+  methods:{
+    handleCityClick (city) {
+      this.$store.dispatch('changeCity',city)
+      this.$router.push('/')
+    }
+  },
   computed:{
     hasNoData () {
       return !this.list.length

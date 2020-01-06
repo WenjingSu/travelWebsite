@@ -7,7 +7,7 @@
       <span class="iconfont">&#xe60d;</span>输入城市/景点/游玩主题</div>
     <router-link to='/city'>
     <div class="header-right">
-      <span class="iconfont arrowicon">&#xe624;</span>{{this.city}}</div>
+      <span class="iconfont arrowicon">&#xe624;</span>{{this.$store.state.city}}</div>
     </router-link>
   </div>
 </template>
