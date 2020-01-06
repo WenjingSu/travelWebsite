@@ -1,13 +1,13 @@
 <template>
   <div class="header">
     <div class="header-left">
-      <span class="iconfont">&#xe629;</span>
+      <span class="iconfont">&#xe624;</span>
     </div>
     <div class="header-input">
-      <span class="iconfont">&#xe60d;</span>输入城市/景点/游玩主题</div>
+      <span class="iconfont">&#xe632;</span>输入城市/景点/游玩主题</div>
     <router-link to='/city'>
     <div class="header-right">
-      <span class="iconfont arrowicon">&#xe624;</span>{{this.$store.state.city}}</div>
+      <span class="iconfont arrowicon">&#xe64a;</span>{{this.$store.state.city}}</div>
     </router-link>
   </div>
 </template>
