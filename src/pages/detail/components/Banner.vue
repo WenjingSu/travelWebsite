@@ -2,13 +2,13 @@
 	<div>
     <div class="banner" @click="handleGalleryShow">
       <img class="banner-img"
-      src="//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg"/>
+      :src="bannerImg"/>
       <div class="banner-info">
-        <div class="banner-title">故宫(AAAAA景区)</div>
-        <div class="banner-number"><span class="iconfont banner-icon">&#xe692;</span>12</div>
+        <div class="banner-title">{{sightName}}</div>
+        <div class="banner-number"><span class="iconfont banner-icon">&#xe692;</span></div>
       </div>
     </div>
-    <common-gallery :imgs="imgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
+    <common-gallery :imgs="galleryImgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
   </div>
 </template>
 
@@ -19,15 +19,21 @@ export default{
   components:{
     CommonGallery
   },
+  props:{
+    sightName:String,
+    bannerImg:String,
+    galleryImgs:Array
+  },
   data () {
     return {
-      showGallery: false,
-      imgs:['http://img1.qunarzz.com/wugc/p123/201211/19/a2045d091f02b25493835fbb.png_350x240_cf4cd08e.png','http://img1.qunarzz.com/wugc/p123/201211/19/a2045d091f02b25493835fbb.png_350x240_cf4cd08e.png']
+      showGallery: false
+      //imgs:['http://img1.qunarzz.com/wugc/p123/201211/19/a2045d091f02b25493835fbb.png_350x240_cf4cd08e.png','http://img1.qunarzz.com/wugc/p123/201211/19/a2045d091f02b25493835fbb.png_350x240_cf4cd08e.png']
     }
   },
   methods:{
     handleGalleryShow () {
       this.showGallery=true
+
     },
     handleGalleryClose () {
       this.showGallery=false

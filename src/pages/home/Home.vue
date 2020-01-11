@@ -39,7 +39,7 @@ export default{
     getHomeInfoSuccess (res) {
       res=res.data
       if(res.ret&&res.data){
-        console.log(res)
+        // console.log(res)
         const data=res.data
         this.swiperList=data.swiperList
         this.iconList=data.iconList
